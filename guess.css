@@ -138,6 +138,9 @@ body {
           & .is-wrong {
             background-color: #272f40;
           }
+          & .hint-letter {
+            background-color: #2ade2a;
+          }
         }
         & .message {
           margin-top: 40px;
