@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* :root {
+  
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #eee;
+  font-family: "Open Sans", serif;
+  height: 100vh;
+}
+
+.container {
+  width: calc(100% - 200px);
+  margin: 0 auto;
+  display: grid;
+  text-align: center;
+  align-content: space-between;
+  height: 100%;
+  & .block-box {
+    display: inherit;
+    & h1 {
+      font-size: 30px;
+      color: #333;
+      margin-block: 0;
+      padding-block: 15px;
+      background-color: white;
+    }
+    & .guess-game {
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      & .game-area {
+        display: flex;
+        flex-direction: column;
+        & .inputs {
+          & div {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & label {
+              margin-right: 10px;
+              font-size: 24px;
+              font-weight: bold;
+            }
+            & input {
+              width: 50px;
+              height: 50px;
+              border: none;
+              margin-inline: 5px;
+              border-bottom: 2px solid #4f4f4f;
+              border-radius: 5px;
+              font-size: 40px;
+              text-align: center;
+              background-color: white;
+            }
+            & input:focus {
+              outline: none;
+            }
+            & .yes-in-place {
+              background-color: #ff9814;
+              color: white !important;
+              border: none;
+            }
+            & .not-in-place {
+              background-color: #309d82;
+              color: white !important;
+              border: none;
+            }
+            & .is-wrong {
+              background-color: #272f40;
+              color: white !important;
+              border: none;
+            }
+          }
+          & .disabled-inputs {
+            opacity: 0.5;
+          }
+        }
+        & .control {
+          & button {
+            border: none;
+            padding-block: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          & .check {
+            background-color: #e2492c;
+            padding-inline: 60px;
+            margin-right: 5px;
+          }
+          & .hint {
+            background-color: #00797c;
+            padding-inline: 30px;
+            & span {
+              padding-right: 5px;
+            }
+          }
+          & button:disabled {
+            background-color: black;
+            opacity: 0.4;
+            cursor: not-allowed;
+          }
+        }
+      }
+      & .key-colors {
+        margin-inline: 15px;
+        & .key-color {
+          display: flex;
+          padding: 10px;
+          background-color: white;
+          margin-block: 15px;
+          font-weight: bold;
+          & .key-text {
+            align-self: center;
+            padding-left: 10px;
+          }
+          & :first-child {
+            width: 20px;
+            height: 20px;
+          }
+          & .yes-in-place {
+            background-color: #ff9814;
+          }
+          & .not-in-place {
+            background-color: #309d82;
+          }
+          & .is-wrong {
+            background-color: #272f40;
+          }
+        }
+        & .message {
+          margin-top: 40px;
+          text-align: center;
+          font-weight: bold;
+          font-size: 30px;
+          span {
+            font-weight: bold;
+            display: block;
+            font-size: 50px;
+            color: #f44336;
+            text-transform: capitalize;
+            margin-top: 10px;
+          }
+          & p {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+  & .copy-right {
+    margin-block: 20px 10px;
+    text-align: center;
+    font-size: 13px;
+    justify-self: center;
+    bottom: 0;
+    & p {
+    margin: 0;
+    font-size: initial;
+    color: #9b0000;
+    }
+  }
+}
+
+/* Responsive Design */
+
+/* Smartphone Screen */
+@media screen and (max-width: 767px) {
+  .container {
+    justify-content: center;
+    & .block-box {
+      & .guess-game {
+        flex-direction: column-reverse;
+        padding: 0;
+        & .game-area {
+          & .inputs {
+            & div {
+              & label {
+                font-size: 16px;
+              }
+              & input {
+                width: 40px;
+                height: 40px;
+                font-size: 30px;
+              }
+            }
+          }
+          & .control {
+            & button {
+              font-size: 16px;
+            }
+            & .check {
+              padding-inline: 60px;
+            }
+          }
+        }
+        & .key-colors {
+          margin: 0;
+          & .key-color {
+            font-size: 14px;
+          }
+          & .message {
+            margin-block: 20px;
+            font-size: 20px;
+            & span {
+              font-size: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    & .block-box {
+      & .guess-game {
+        & .game-area {
+          & .control {
+            & .check {
+              padding-inline: 60px;
+            }
+          }
+        }
+        & .key-colors {
+          & h2 {
+            margin-top: 0;
+          }
+          & .key-color {
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

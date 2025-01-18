@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess TheWord Game</title>
+  <link rel="stylesheet" href="guess.css">
+  <script src="guess.js" defer></script>
+</head>
+<body>  
+  <div class="container">
+    <div class="block-box">
+      <h1>Guess The Word</h1>
+      <div class="guess-game">
+        <div class="game-area">
+          <div class="inputs"></div>
+          <div class="control">
+            <button class="check">Check Word</button>
+            <button class="hint"><span></span>Hint</button>
+          </div>
+        </div>
+        <div class="key-colors">
+          <h2>Key Colors</h2>
+          <div class="key-color">
+            <div class="key yes-in-place"></div>
+            <div class="key-text">Letter Is Correct And In Place</div>
+          </div>
+          <div class="key-color">
+            <div class="key not-in-place"></div>
+            <div class="key-text">Letter Is Correct But Not In Place</div>
+          </div>
+          <div class="key-color">
+            <div class="key is-wrong"></div>
+            <div class="key-text">Letter Is wrong And Not Exists In Word</div>
+          </div>
+          <div class="message"></div>  
+        </div>
+      </div>
+    </div>
+    <div class="copy-right">
+      Game Coded By
+      <p>AbuBakr Abdelhay</p>
+    </div>
+  </div>
+</body>
+</html>
